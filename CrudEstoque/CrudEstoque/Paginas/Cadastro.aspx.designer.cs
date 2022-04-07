@@ -11,7 +11,7 @@ namespace CrudEstoque.Paginas
 {
 
 
-    public partial class Login
+    public partial class Cadastro
     {
 
         /// <summary>
@@ -24,13 +24,22 @@ namespace CrudEstoque.Paginas
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
 
         /// <summary>
-        /// Controle Panel1.
+        /// Controle LabelNome.
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
         /// Para modificar, mova a declaração de campo do arquivo de designer a um arquivo code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Panel Panel1;
+        protected global::System.Web.UI.WebControls.Label LabelNome;
+
+        /// <summary>
+        /// Controle txtCadastroNome.
+        /// </summary>
+        /// <remarks>
+        /// Campo gerado automaticamente.
+        /// Para modificar, mova a declaração de campo do arquivo de designer a um arquivo code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtCadastroNome;
 
         /// <summary>
         /// Controle LabelEmail.
@@ -42,48 +51,48 @@ namespace CrudEstoque.Paginas
         protected global::System.Web.UI.WebControls.Label LabelEmail;
 
         /// <summary>
-        /// Controle TextEmail.
+        /// Controle txtCadastroEmail.
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
         /// Para modificar, mova a declaração de campo do arquivo de designer a um arquivo code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextEmail;
+        protected global::System.Web.UI.WebControls.TextBox txtCadastroEmail;
 
         /// <summary>
-        /// Controle LabelSenha.
+        /// Controle LabelSenha1.
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
         /// Para modificar, mova a declaração de campo do arquivo de designer a um arquivo code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label LabelSenha;
+        protected global::System.Web.UI.WebControls.Label LabelSenha1;
 
         /// <summary>
-        /// Controle TextSenha.
+        /// Controle txtCadastroSenha1.
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
         /// Para modificar, mova a declaração de campo do arquivo de designer a um arquivo code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextSenha;
+        protected global::System.Web.UI.WebControls.TextBox txtCadastroSenha1;
 
         /// <summary>
-        /// Controle btLogar.
+        /// Controle LabelSenha2.
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
         /// Para modificar, mova a declaração de campo do arquivo de designer a um arquivo code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btLogar;
+        protected global::System.Web.UI.WebControls.Label LabelSenha2;
 
         /// <summary>
-        /// Controle btCadastro.
+        /// Controle txtCadastroSenha2.
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
         /// Para modificar, mova a declaração de campo do arquivo de designer a um arquivo code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btCadastro;
+        protected global::System.Web.UI.WebControls.TextBox txtCadastroSenha2;
     }
 }

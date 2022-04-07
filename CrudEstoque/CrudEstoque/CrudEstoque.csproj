@@ -67,9 +67,33 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App_Data\EstoqueDB.mdf" />
+    <Content Include="App_Data\EstoqueDB_log.ldf">
+      <DependentUpon>EstoqueDB.mdf</DependentUpon>
+    </Content>
+    <Content Include="Paginas\Cadastro.aspx" />
+    <Content Include="Paginas\Login.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DAL\DALProduto.cs" />
+    <Compile Include="DAL\DALUsuario.cs" />
+    <Compile Include="Modelo\ModeloProduto.cs" />
+    <Compile Include="Modelo\ModeloUsuario.cs" />
+    <Compile Include="Paginas\Cadastro.aspx.cs">
+      <DependentUpon>Cadastro.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Paginas\Cadastro.aspx.designer.cs">
+      <DependentUpon>Cadastro.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Paginas\Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Paginas\Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -80,6 +104,9 @@
     <None Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="imagens\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

@@ -19,7 +19,7 @@ namespace CrudEstoque.DAL
         {
 
             System.Configuration.Configuration rootWebConfig = System.Web.Configuration.WebConfigurationManager.OpenWebConfiguration("/MyWebSiteRoot");
-            connString = rootWebConfig.ConnectionStrings.ConnectionStrings["ConnectionString"];
+            connString = rootWebConfig.ConnectionStrings.ConnectionStrings["BancoEstoqueLocal"];
 
         }
 

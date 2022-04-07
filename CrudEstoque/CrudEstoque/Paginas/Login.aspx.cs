@@ -36,7 +36,7 @@ namespace CrudEstoque.Paginas
                     Session["ID"] = u.ID;
                     Session["nome"] = u.nome;
                     Session["email"] = email;
-                    Response.Redirect("~/produtos.aspx");
+                    Response.Redirect("~/Paginas/produtos.aspx");
 
                 }
 
@@ -62,7 +62,7 @@ namespace CrudEstoque.Paginas
 
         protected void btCadastrar_Click(object sender, EventArgs e)
         {
-            Response.Redirect("~/cadastro.aspx");
+            Response.Redirect("~/Paginas/Cadastro.aspx");
         }
     }
 }

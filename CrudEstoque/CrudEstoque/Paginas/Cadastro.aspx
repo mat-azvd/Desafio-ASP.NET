@@ -32,7 +32,10 @@
             <asp:Label ID="LabelSenha2" runat="server" Text="Confirme a senha"></asp:Label>
             <asp:TextBox ID="txtCadastroSenha2" runat="server"></asp:TextBox>
 
-            
+            <br />
+
+            <asp:Button ID="btCadastrar"  runat="server" Text="Cadastrar" OnClick="btCadastrar_Click" />
+            <asp:Button ID="btVoltar"  runat="server" Text="Voltar" OnClick="btVoltar_Click" />
 
         </div>
     </form>

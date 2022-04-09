@@ -71,8 +71,10 @@
     <Content Include="App_Data\EstoqueDB_log.ldf">
       <DependentUpon>EstoqueDB.mdf</DependentUpon>
     </Content>
+    <Content Include="CSS\Styles.css" />
     <Content Include="Paginas\Cadastro.aspx" />
     <Content Include="Paginas\Login.aspx" />
+    <Content Include="Paginas\Produtos.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -94,10 +96,25 @@
     <Compile Include="Paginas\Login.aspx.designer.cs">
       <DependentUpon>Login.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Paginas\MasterPage.Master.cs">
+      <DependentUpon>MasterPage.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Paginas\MasterPage.Master.designer.cs">
+      <DependentUpon>MasterPage.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Paginas\Produtos.aspx.cs">
+      <DependentUpon>Produtos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Paginas\Produtos.aspx.designer.cs">
+      <DependentUpon>Produtos.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+    <Content Include="Paginas\MasterPage.Master" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

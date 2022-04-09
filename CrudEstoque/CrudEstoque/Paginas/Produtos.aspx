@@ -2,34 +2,19 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-
-     <h1>Produtos</h1>
-
-    <table>
-        <tr>
-            <th>
-                <asp:Label runat="server" Text="Produto"></asp:Label>
-            </th>
-            <th>
-                <asp:Label runat="server" Text="Codigo"></asp:Label>
-            </th>
-            <th>
-                <asp:Label runat="server" Text="Nome do Produto"></asp:Label>
-            </th>
-            <th>
-                <asp:Label runat="server" Text="Ação1"></asp:Label>
-            </th>
-            <th>
-                <asp:Label runat="server" Text="Ação2"></asp:Label>
-            </th>
-           
-        </tr>
-
-        <tr>
-             <th>
-                <asp:Button runat="server" Text="Quantidade"></asp:Button>
-            </th>
-        </tr>
-    </table>
-
+    
+<asp:Panel runat="server">
+    
+    <asp:GridView ID="GridViewProduto" runat="server" AutoGenerateColumns="False" OnSelectedIndexChanged="GridView1_SelectedIndexChanged">
+        <Columns>
+            <asp:BoundField HeaderText="Código" />
+            <asp:BoundField HeaderText="Nome do Produto" />
+            <asp:BoundField HeaderText="Quantidade" />
+            <asp:CommandField HeaderText="Ação1" ShowEditButton="True" />
+            <asp:CommandField HeaderText="Ação2" ShowDeleteButton="True" />
+        </Columns>
+    </asp:GridView>
+    
+ </asp:Panel>   
 </asp:Content>
+

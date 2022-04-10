@@ -42,21 +42,48 @@ namespace CrudEstoque.Paginas
         protected global::System.Web.UI.WebControls.Button ButtonDownloadPDF;
 
         /// <summary>
-        /// Controle ModalPanel.
+        /// Controle lblabel.
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
         /// Para modificar, mova a declaração de campo do arquivo de designer a um arquivo code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Panel ModalPanel;
+        protected global::System.Web.UI.WebControls.Label lblabel;
 
         /// <summary>
-        /// Controle botaoFechar.
+        /// Controle modalJanela.
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
         /// Para modificar, mova a declaração de campo do arquivo de designer a um arquivo code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button botaoFechar;
+        protected global::System.Web.UI.WebControls.ModalPopupExtender modalJanela;
+
+        /// <summary>
+        /// Controle PanelModal.
+        /// </summary>
+        /// <remarks>
+        /// Campo gerado automaticamente.
+        /// Para modificar, mova a declaração de campo do arquivo de designer a um arquivo code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Panel PanelModal;
+
+        /// <summary>
+        /// Controle modalClose.
+        /// </summary>
+        /// <remarks>
+        /// Campo gerado automaticamente.
+        /// Para modificar, mova a declaração de campo do arquivo de designer a um arquivo code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button modalClose;
+
+        /// <summary>
+        /// Controle modalSalvar.
+        /// </summary>
+        /// <remarks>
+        /// Campo gerado automaticamente.
+        /// Para modificar, mova a declaração de campo do arquivo de designer a um arquivo code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button modalSalvar;
     }
 }

@@ -17,14 +17,25 @@
     </asp:GridView> 
     <asp:Button ID="botaoInserir" runat="server" Text="Inserir" OnClick="botaoInserir_Click" />
     <asp:Button ID="ButtonDownloadPDF" runat="server" Text="Download PFD" />
+    <asp:Label ID="lblabel" runat="server" Text="Label"></asp:Label>
  </asp:Panel> 
     
 
-    <asp:Panel ID="ModalPanel" runat="server" Width="500px">
-     TESTE
-     <br />
-     <asp:Button ID="botaoFechar" runat="server" Text="Fechar" />
+    <asp:ModalPopupExtender ID="modalJanela" PopupControlID="PanelModal" TargetControlID="lblabel" CancelCrontrolID="modalClose" runat="server"></asp:ModalPopupExtender>
+
+    <asp:Panel ID="PanelModal" CssClass="modal" runat="server">
+
+        <div>
+
+        </div>
+
+        <div>
+            <asp:Button ID="modalClose" runat="server" Text="Fechar" />
+            <asp:Button ID="modalSalvar" runat="server" Text="Salvar" />
+        </div>
+
     </asp:Panel>
+  
 
 </asp:Content>
 

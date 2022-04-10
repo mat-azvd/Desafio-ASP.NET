@@ -1,4 +1,5 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Paginas/MasterPage.Master" AutoEventWireup="true" CodeBehind="Produtos.aspx.cs" Inherits="CrudEstoque.Paginas.Produtos" %>
+
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
@@ -14,8 +15,16 @@
             <asp:CommandField HeaderText="Ação2" ShowDeleteButton="True" />
         </Columns>
     </asp:GridView> 
-    <asp:Button ID="botaoInserir" runat="server" Text="Inserir" />
+    <asp:Button ID="botaoInserir" runat="server" Text="Inserir" OnClick="botaoInserir_Click" />
     <asp:Button ID="ButtonDownloadPDF" runat="server" Text="Download PFD" />
- </asp:Panel>   
+ </asp:Panel> 
+    
+
+    <asp:Panel ID="ModalPanel" runat="server" Width="500px">
+     TESTE
+     <br />
+     <asp:Button ID="botaoFechar" runat="server" Text="Fechar" />
+    </asp:Panel>
+
 </asp:Content>
 

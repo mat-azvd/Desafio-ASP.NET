@@ -31,7 +31,23 @@ namespace CrudEstoque.Paginas
 
         protected void GridView1_SelectedIndexChanged(object sender, EventArgs e)
         {
+            try { 
+            int linha = GridViewProduto.SelectedIndex;
+            int cod = Convert.ToInt32(GridViewProduto.Rows[linha].Cells[0].Text);
+            DALProduto dal = new DALProduto();
 
+            ModeloProduto p = dal.GetRegistro(cod);
+
+            if (p != null)
+                {
+                    
+                }
+            }
+
+            catch
+            {
+
+            }
         }
 
         protected void GridViewProduto_RowDeleting(object sender, GridViewDeleteEventArgs e)

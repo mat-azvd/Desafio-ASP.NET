@@ -182,7 +182,7 @@ namespace CrudEstoque.DAL
         }
         */
 
-        public ModeloProduto GetRegistro(String nome)
+        public ModeloProduto GetRegistro(int ID)
         {
             ModeloProduto obj = new ModeloProduto();
             SqlConnection con = new SqlConnection();
@@ -192,8 +192,8 @@ namespace CrudEstoque.DAL
 
             try
             {
-                cmd.CommandText = "select * from Produto where nome=@nome";
-                cmd.Parameters.AddWithValue("@nome", nome);
+                cmd.CommandText = "select * from Produto where ID=@ID";
+                cmd.Parameters.AddWithValue("@ID", ID);
                 con.Open();
                 SqlDataReader registro = cmd.ExecuteReader();
 

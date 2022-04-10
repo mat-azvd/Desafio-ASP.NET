@@ -5,7 +5,7 @@
     
 <asp:Panel runat="server">
     
-    <asp:GridView ID="GridViewProduto" runat="server" AutoGenerateColumns="False" OnSelectedIndexChanged="GridView1_SelectedIndexChanged" ShowHeaderWhenEmpty="true" EmptyDataText="Sem Produtos Cadastrados">
+    <asp:GridView ID="GridViewProduto" runat="server" AutoGenerateColumns="False" OnSelectedIndexChanged="GridView1_SelectedIndexChanged" ShowHeaderWhenEmpty="true" EmptyDataText="Sem Produtos Cadastrados" OnRowDeleting="GridViewProduto_RowDeleting">
         <Columns>
             <asp:BoundField HeaderText="Código" DataField="ID" />
             <asp:BoundField HeaderText="Nome do Produto" DataField="nome" />

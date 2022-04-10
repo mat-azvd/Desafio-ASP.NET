@@ -99,7 +99,7 @@ namespace CrudEstoque.DAL
 
         }
 
-        public void Delete(ModeloProduto cod)
+        public void Delete(int ID)
         {
 
             //Criar um objeto de conexão
@@ -113,7 +113,7 @@ namespace CrudEstoque.DAL
             try
             {
                 cmd.Connection = con;
-                cmd.CommandText = "Delete from Produto where ID= " + cod.ToString();
+                cmd.CommandText = "Delete from Produto where ID="+ID.ToString();
 
                 con.Open();
                 cmd.ExecuteNonQuery();

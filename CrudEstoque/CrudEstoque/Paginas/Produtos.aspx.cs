@@ -33,5 +33,19 @@ namespace CrudEstoque.Paginas
         {
 
         }
+
+        protected void GridViewProduto_RowDeleting(object sender, GridViewDeleteEventArgs e)
+        {
+            int linha = Convert.ToInt32(e.RowIndex);
+            int cod = Convert.ToInt32(GridViewProduto.Rows[linha].Cells[0].Text);
+            DALProduto dal = new DALProduto();
+            dal.Delete(cod);
+            AtualizaGrid();
+        }
+
+        protected void botaoInserir_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

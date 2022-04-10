@@ -35,6 +35,7 @@ namespace CrudEstoque.Paginas
             obj.senha=senha;
 
             du.Inserir(obj);
+            Response.Redirect("~/Paginas/Login.aspx");
         }
     }
 }

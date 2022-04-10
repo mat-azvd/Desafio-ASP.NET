@@ -57,3 +57,4 @@ D:\Program Files\Desenvolvimento-APS.NET\Desafio_Asp\CrudEstoque\CrudEstoque\obj
 D:\Program Files\Desenvolvimento-APS.NET\Desafio_Asp\CrudEstoque\CrudEstoque\obj\Debug\CrudEstoque.csproj.CopyComplete
 D:\Program Files\Desenvolvimento-APS.NET\Desafio_Asp\CrudEstoque\CrudEstoque\obj\Debug\CrudEstoque.dll
 D:\Program Files\Desenvolvimento-APS.NET\Desafio_Asp\CrudEstoque\CrudEstoque\obj\Debug\CrudEstoque.pdb
+D:\Program Files\Desenvolvimento-APS.NET\Desafio_Asp\CrudEstoque\CrudEstoque\bin\AjaxControlToolkit.dll

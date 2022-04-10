@@ -14,3 +14,13 @@ header{
 }
 
 
+.modal {
+    width: 50%;
+    height: 10%;
+    margin: auto;
+    border-width: 5px;
+    border-radius: 8px;
+    padding-bottom: 10px;
+    background-color: black;
+    border: rgb(0, 0, 0);
+}

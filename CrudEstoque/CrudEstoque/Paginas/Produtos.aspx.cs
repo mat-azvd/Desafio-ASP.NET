@@ -59,9 +59,22 @@ namespace CrudEstoque.Paginas
             AtualizaGrid();
         }
 
-        protected void botaoInserir_Click(object sender, EventArgs e)
+        protected void botaoModalInserir_Click(object sender, EventArgs e)
         {
+            ModalInserir.Show();
+        }
 
+
+        protected void botaoInserir_Click1(object sender, EventArgs e)
+        {
+            DALProduto dal = new DALProduto();
+            ModeloProduto obj = new ModeloProduto();
+            obj.nome = txtProdNome.Text;
+            obj.preco = Convert.ToInt32(txtProdPreco.Text);
+            obj.quantidade = Convert.ToInt32(txtProdQuantidade.Text);
+            obj.ultima_alt_por = Convert.ToInt32(Session["ID"]);
+            dal.Inserir(obj);
+            AtualizaGrid();
         }
     }
 }

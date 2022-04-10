@@ -38,7 +38,7 @@ namespace CrudEstoque.DAL
             try
             {
                 cmd.Connection = con;
-                cmd.CommandText = "Insert into Produto (nome,preco,quantidade,ultima_alt_por) values (@nome,@email,@senha,@ultima_alt_por)";
+                cmd.CommandText = "Insert into Produto (nome,preco,quantidade,ultima_alt_por) values (@nome,@preco,@quantiade,@ultima_alt_por)";
                 cmd.Parameters.AddWithValue("nome", obj.nome);
                 cmd.Parameters.AddWithValue("preco", obj.preco);
                 cmd.Parameters.AddWithValue("quantidade", obj.quantidade);

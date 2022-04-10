@@ -44,7 +44,6 @@ namespace CrudEstoque.DAL
                 cmd.Parameters.AddWithValue("quantidade", obj.quantidade);
                 cmd.Parameters.AddWithValue("ultima_alt_por", obj.ultima_alt_por);
 
-
                 con.Open();
                 obj.ID = Convert.ToInt32(cmd.ExecuteScalar());
 

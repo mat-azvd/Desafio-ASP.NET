@@ -6,7 +6,6 @@ using CrudEstoque.Modelo;
 using System.Data;
 using System.Data.SqlClient;
 
-
 namespace CrudEstoque.DAL
 {
     public class DALUsuario

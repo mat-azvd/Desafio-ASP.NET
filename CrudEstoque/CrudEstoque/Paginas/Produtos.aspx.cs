@@ -36,9 +36,9 @@ namespace CrudEstoque.Paginas
             int cod = Convert.ToInt32(GridViewProduto.Rows[linha].Cells[0].Text);
             DALProduto dal = new DALProduto();
 
-            ModeloProduto p = dal.GetRegistro(cod);
+            ModeloProduto obj = dal.GetRegistro(cod);
 
-            if (p != null)
+            if (obj != null)
                 {
                     
                 }
@@ -56,6 +56,20 @@ namespace CrudEstoque.Paginas
             int cod = Convert.ToInt32(GridViewProduto.Rows[linha].Cells[0].Text);
             DALProduto dal = new DALProduto();
             dal.Delete(cod);
+            AtualizaGrid();
+        }
+
+        protected void GridViewProduto_RowDeleting1(object sender, GridViewDeleteEventArgs e)
+        {
+            int linha = Convert.ToInt32(e.RowIndex);
+            int cod = Convert.ToInt32(GridViewProduto.Rows[linha].Cells[0].Text);
+            DALProduto dal = new DALProduto();
+            
+            ModeloProduto obj = dal.GetRegistro(cod);
+            obj.quantidade = 0;
+
+            dal.Alterar(obj);
+
             AtualizaGrid();
         }
 
@@ -82,6 +96,9 @@ namespace CrudEstoque.Paginas
             obj.ultima_alt_por = ultima_alt_por;
             
             dal.Inserir(obj);
+
+
+
             AtualizaGrid();
            
         }

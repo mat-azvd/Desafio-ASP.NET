@@ -41,7 +41,7 @@
             <asp:TextBox ID="txtQuantidadeAlterar" runat="server" Text=""></asp:TextBox>
             <br />
             <br />
-            <asp:Label ID="ultima_alt_porAlterar" CssClass="label" runat="server" Text="Ultima alt por:"></asp:Label>
+            <asp:Label ID="ultima_alt_porAlterar" CssClass="label" runat="server" Text="Ultima alt por: "></asp:Label>
             <asp:Label ID="ultima_label" CssClass="label" runat="server" Text=""></asp:Label>
             <br />
             <br />

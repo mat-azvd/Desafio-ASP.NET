@@ -30,3 +30,26 @@ header{
 .label{
     color: white; 
 }
+
+.PanelLogin {
+   
+    width: 80%;
+    height: 10%;
+    margin: auto;
+    padding: 0.6em;
+    border: solid;
+    border-color: black;
+    border-width: 5px;
+    border-radius: 8px;
+    padding-bottom: 10px;
+}
+
+.TextBox {
+    border-color: #dcdcdc;
+    padding: 4px;
+    margin: 15px;
+    border-width: 2px;
+    border-radius: 10px;
+    border-style: solid;
+    transition: box-shadow 0.3s, border 0.3s;
+}

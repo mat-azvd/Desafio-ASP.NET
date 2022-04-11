@@ -36,37 +36,34 @@ namespace CrudEstoque.Paginas
 
             ModeloUsuario objU = dALUsuario.GetRegistroID(ID);
 
-
             txtNomeAlterar.Text = objP.nome;
             txtPrecoAlterar.Text = Convert.ToString(objP.preco);
             txtQuantidadeAlterar.Text = Convert.ToString(objP.quantidade);
-            ultima_label.Text = Convert.ToString(objP.ultima_alt_por);
+            ultima_label.Text = Convert.ToString(objU.nome);
 
             modalEditar.Show();
         }
 
         protected void botaoModalAlterar_Click(object sender, EventArgs e)
         {
-            try
-            {
+                
                 int linha = GridViewProduto.SelectedIndex;
                 int cod = Convert.ToInt32(GridViewProduto.Rows[linha].Cells[0].Text);
-                DALProduto dal = new DALProduto();
 
+                DALProduto dal = new DALProduto();             
                 ModeloProduto obj = dal.GetRegistro(cod);
 
+                obj.nome = txtNomeAlterar.Text;
+                obj.preco = Convert.ToInt32(txtPrecoAlterar.Text);
+                obj.quantidade = Convert.ToInt32(txtQuantidadeAlterar.Text);              
+                obj.ultima_alt_por = Convert.ToInt32(Session["ID"]);
+                dal.Alterar(obj);
 
+                string msg = "<script> alert('Produto Alterado!'); </script>";
+                Response.Write(msg);
 
-                if (obj != null)
-                {
+                AtualizaGrid();
 
-                }
-            }
-
-            catch
-            {
-
-            }
         }
 
         protected void GridViewProduto_RowDeleting(object sender, GridViewDeleteEventArgs e)
@@ -86,6 +83,7 @@ namespace CrudEstoque.Paginas
             
             ModeloProduto obj = dal.GetRegistro(cod);
             obj.quantidade = 0;
+            obj.ultima_alt_por = Convert.ToInt32(Session["ID"]);
 
             dal.Alterar(obj);
 
@@ -118,13 +116,20 @@ namespace CrudEstoque.Paginas
             ModeloProduto comparar = dal.GetRegistroNome(nome);
 
             if (comparar.nome != null)
-            {            
-                msg = "<script> alert('ERRO: Produto ja Existe!'); </script>";              
+            {                
+                 msg = "<script> alert('ERRO: Produto ja Existe!'); </script>";              
             }
             else
             {
-                dal.Inserir(obj);
-                msg = "<script> alert('Produto Inserido!'); </script>";
+                if (obj.quantidade <= 0)
+                {
+                    msg = "<script> alert('ERRO: Quantidade menor ou igua a zero!'); </script>";
+                }
+                else
+                {
+                    dal.Inserir(obj);
+                    msg = "<script> alert('Produto Inserido!'); </script>";
+                }
             }
 
             Response.Write(msg);

@@ -214,6 +214,40 @@ namespace CrudEstoque.DAL
             return obj;
         }
 
+        public ModeloUsuario GetRegistroID(int ID)
+        {
+            ModeloUsuario obj = new ModeloUsuario();
+            SqlConnection con = new SqlConnection();
+            con.ConnectionString = connString.ToString();
+            SqlCommand cmd = new SqlCommand();
+            cmd.Connection = con;
+
+            try
+            {
+                cmd.CommandText = "select * from Usuario where ID=@ID";
+                cmd.Parameters.AddWithValue("@ID", ID);
+                con.Open();
+                SqlDataReader registro = cmd.ExecuteReader();
+
+                if (registro.HasRows)
+                {
+                    registro.Read();
+                    obj.ID = Convert.ToInt32(registro["ID"]);
+                    obj.nome = Convert.ToString(registro["nome"]);
+                    obj.email = Convert.ToString(registro["email"]);
+                    obj.senha = Convert.ToString(registro["senha"]);
+
+                }
+            }
+
+            catch (Exception erro)
+            {
+
+                throw new Exception(erro.Message);
+            }
+
+            return obj;
+        }
 
     }
 }

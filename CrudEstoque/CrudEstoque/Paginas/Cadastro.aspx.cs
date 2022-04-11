@@ -23,19 +23,35 @@ namespace CrudEstoque.Paginas
 
         protected void btCadastrar_Click(object sender, EventArgs e)
         {
+            string msg = "";
             string nome = txtCadastroNome.Text;
             string email = txtCadastroEmail.Text;
             string senha = txtCadastroSenha1.Text;
 
-            DALUsuario du = new DALUsuario();
+            DALUsuario dal = new DALUsuario();
             ModeloUsuario obj = new ModeloUsuario();
 
             obj.nome= nome;
             obj.email=email;    
             obj.senha=senha;
 
-            du.Inserir(obj);
-            Response.Redirect("~/Paginas/Login.aspx");
+            ModeloUsuario comparar = dal.GetRegistro(email);
+
+            if (comparar.email != null)
+            {
+                msg = "<script> alert('ERRO: Email ja cadastrado!'); </script>";
+                Response.Write(msg);
+            }
+            else
+            {
+                dal.Inserir(obj);
+                msg = "<script> alert('Usuario Cadastrado!'); </script>";               
+                Response.Redirect("~/Paginas/Login.aspx");
+                
+            }
+
+            
+
         }
     }
 }

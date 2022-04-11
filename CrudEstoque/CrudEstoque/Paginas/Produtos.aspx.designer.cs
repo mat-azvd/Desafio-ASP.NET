@@ -69,6 +69,78 @@ namespace CrudEstoque.Paginas
         protected global::System.Web.UI.WebControls.Panel PanelModalEditar;
 
         /// <summary>
+        /// Controle nomeAlterar.
+        /// </summary>
+        /// <remarks>
+        /// Campo gerado automaticamente.
+        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label nomeAlterar;
+
+        /// <summary>
+        /// Controle txtNomeAlterar.
+        /// </summary>
+        /// <remarks>
+        /// Campo gerado automaticamente.
+        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtNomeAlterar;
+
+        /// <summary>
+        /// Controle precoAlterar.
+        /// </summary>
+        /// <remarks>
+        /// Campo gerado automaticamente.
+        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label precoAlterar;
+
+        /// <summary>
+        /// Controle txtPrecoAlterar.
+        /// </summary>
+        /// <remarks>
+        /// Campo gerado automaticamente.
+        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtPrecoAlterar;
+
+        /// <summary>
+        /// Controle quantidadeAlterar.
+        /// </summary>
+        /// <remarks>
+        /// Campo gerado automaticamente.
+        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label quantidadeAlterar;
+
+        /// <summary>
+        /// Controle txtQuantidadeAlterar.
+        /// </summary>
+        /// <remarks>
+        /// Campo gerado automaticamente.
+        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtQuantidadeAlterar;
+
+        /// <summary>
+        /// Controle ultima_alt_porAlterar.
+        /// </summary>
+        /// <remarks>
+        /// Campo gerado automaticamente.
+        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label ultima_alt_porAlterar;
+
+        /// <summary>
+        /// Controle ultima_label.
+        /// </summary>
+        /// <remarks>
+        /// Campo gerado automaticamente.
+        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label ultima_label;
+
+        /// <summary>
         /// Controle botaoModalFechar1.
         /// </summary>
         /// <remarks>

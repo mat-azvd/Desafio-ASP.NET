@@ -26,3 +26,7 @@ header{
     background-color: black;
     border: rgb(0, 0, 0);
 }
+
+.label{
+    color: white; 
+}

@@ -60,6 +60,7 @@ namespace CrudEstoque.DAL
             }
         }
 
+
         public void Alterar(ModeloProduto obj)
         {
 

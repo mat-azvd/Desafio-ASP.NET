@@ -86,6 +86,7 @@
     <Compile Include="DAL\DALUsuario.cs" />
     <Compile Include="Modelo\ModeloProduto.cs" />
     <Compile Include="Modelo\ModeloUsuario.cs" />
+    <Compile Include="Modelo\TesteModelo.cs" />
     <Compile Include="Paginas\Cadastro.aspx.cs">
       <DependentUpon>Cadastro.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

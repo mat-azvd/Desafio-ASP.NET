@@ -78,6 +78,15 @@ namespace CrudEstoque.Paginas
         protected global::System.Web.UI.WebControls.Panel PanelModalEditar;
 
         /// <summary>
+        /// Controle tituloEditar.
+        /// </summary>
+        /// <remarks>
+        /// Campo gerado automaticamente.
+        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label tituloEditar;
+
+        /// <summary>
         /// Controle nomeAlterar.
         /// </summary>
         /// <remarks>
@@ -184,6 +193,15 @@ namespace CrudEstoque.Paginas
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Panel PanelModalInserir;
+
+        /// <summary>
+        /// Controle tituloInserir.
+        /// </summary>
+        /// <remarks>
+        /// Campo gerado automaticamente.
+        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label tituloInserir;
 
         /// <summary>
         /// Controle prodNome.

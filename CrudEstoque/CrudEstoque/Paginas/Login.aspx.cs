@@ -23,7 +23,7 @@ namespace CrudEstoque.Paginas
 
 
             DALUsuario du = new DALUsuario();
-            ModeloUsuario u = du.GetRegistro(email);
+            ModeloUsuario u = du.GetRegistro(email,senha);
 
             if (u.email != null)
             {
@@ -43,7 +43,7 @@ namespace CrudEstoque.Paginas
                 else
                 {
 
-                    String msg = "<script> alert('Login ou senha incorretos!!!!'); </script>";
+                    String msg = "<script> alert('Login ou senha invalidos!!!!'); </script>";
                     Response.Write(msg);
                     //Response.Write("<script> alert('E-mail ou senha incorretos!');</script>");
 
@@ -53,7 +53,7 @@ namespace CrudEstoque.Paginas
 
             else
             {
-                String msg = "<script> alert('Digite o Login!!!!'); </script>";
+                String msg = "<script> alert('Login ou senha invalidos!!!!'); </script>";
                 Response.Write(msg);
 
             }

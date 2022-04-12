@@ -19,12 +19,15 @@
              
                 <asp:TextBox ID="TextEmail" runat="server" CssClass="TextBox" Textmode="Email" placeholder="Email"></asp:TextBox>
                 <br />
+                <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ErrorMessage="Digite o Email" ControlToValidate="TextEmail" ForeColor="#CC3300" ValidationGroup="validacao"></asp:RequiredFieldValidator>
+                <br />
                  
                 <asp:Textbox ID="TextSenha" CssClass="TextBox" runat="server" TextMode="Password" placeholder="Senha" ></asp:Textbox>
                 <br />
+                <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ErrorMessage="Digite a senha" ControlToValidate="TextSenha" ForeColor="#CC3300" ValidationGroup="validacao"></asp:RequiredFieldValidator>
+                <br />
 
-                <asp:Button ID="btLogar" CssClass="botaoStyle"  runat="server" Text="Logar" OnClick="btLogar_Click" />
-               
+                <asp:Button ID="btLogar" CssClass="botaoStyle"  runat="server" Text="Logar" OnClick="btLogar_Click" ValidationGroup="validacao"/>      
                 <asp:Button ID="btCadastro" CssClass="botaoStyle"  runat="server" Text="Cadastrar" OnClick="btCadastrar_Click" />
 
             </asp:Panel>

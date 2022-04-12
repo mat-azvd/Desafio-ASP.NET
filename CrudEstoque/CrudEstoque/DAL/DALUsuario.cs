@@ -179,7 +179,43 @@ namespace CrudEstoque.DAL
         }
         */
 
-        public ModeloUsuario GetRegistro(String email)
+        public ModeloUsuario GetRegistro(String email,String senha)
+        {
+            ModeloUsuario obj = new ModeloUsuario();
+            SqlConnection con = new SqlConnection();
+            con.ConnectionString = connString.ToString();
+            SqlCommand cmd = new SqlCommand();
+            cmd.Connection = con;
+
+            try
+            {
+                cmd.CommandText = "select * from Usuario where email=@email and senha=@senha";
+                cmd.Parameters.AddWithValue("@email", email);
+                cmd.Parameters.AddWithValue("@senha", senha);
+                con.Open();
+                SqlDataReader registro = cmd.ExecuteReader();
+
+                if (registro.HasRows)
+                {
+                    registro.Read();
+                    obj.ID = Convert.ToInt32(registro["ID"]);
+                    obj.nome = Convert.ToString(registro["nome"]);
+                    obj.email = Convert.ToString(registro["email"]);
+                    obj.senha = Convert.ToString(registro["senha"]);
+
+                }
+            }
+
+            catch (Exception erro)
+            {
+
+                throw new Exception(erro.Message);
+            }
+
+            return obj;
+        }
+
+        public ModeloUsuario GetRegistroEmail(String email)
         {
             ModeloUsuario obj = new ModeloUsuario();
             SqlConnection con = new SqlConnection();
@@ -191,6 +227,7 @@ namespace CrudEstoque.DAL
             {
                 cmd.CommandText = "select * from Usuario where email=@email";
                 cmd.Parameters.AddWithValue("@email", email);
+                
                 con.Open();
                 SqlDataReader registro = cmd.ExecuteReader();
 

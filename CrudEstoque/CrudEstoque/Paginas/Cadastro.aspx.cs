@@ -35,7 +35,7 @@ namespace CrudEstoque.Paginas
             obj.email=email;    
             obj.senha=senha;
 
-            ModeloUsuario comparar = dal.GetRegistro(email);
+            ModeloUsuario comparar = dal.GetRegistroEmail(email);
 
             if (comparar.email != null)
             {

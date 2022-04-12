@@ -4,39 +4,31 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
+<link rel="stylesheet" href="../CSS/Styles.css" />
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <title></title>
 </head>
 <body>
-    <form id="form1" runat="server">
+    <form id="form1" runat="server">    
 
-        <asp:Label runat="server" Text="CADASTRO"></asp:Label>
-        <div>
+        <div id="formLogin">
 
+            <asp:Panel ID="Panel1" CssClass="PanelLogin" runat="server" HorizontalAlign="Center"  >
 
-            <asp:Label ID="LabelNome" runat="server" Text="Digite o Nome"></asp:Label>
-            <asp:TextBox ID="txtCadastroNome" runat="server"></asp:TextBox>
-
+            <asp:Label runat="server" CssClass="LabelTitulo"  Text="Cadastro"></asp:Label>
             <br />
-
-            <asp:Label ID="LabelEmail" runat="server" Text="Digite um Email"></asp:Label>
-            <asp:TextBox ID="txtCadastroEmail" runat="server"></asp:TextBox>
-
+            
+            <asp:TextBox ID="txtCadastroNome" CssClass="TextBox" runat="server" placeholder="Nome"></asp:TextBox>
+            <br />            
+            <asp:TextBox ID="txtCadastroEmail" CssClass="TextBox" runat="server" placeholder="Email"></asp:TextBox>
+            <br />         
+            <asp:TextBox ID="txtCadastroSenha1" CssClass="TextBox" runat="server" placeholder="Senha"></asp:TextBox>
+            <br />         
+            <asp:TextBox ID="txtCadastroSenha2" CssClass="TextBox" runat="server" placeholder="Confirma Senha"></asp:TextBox>
             <br />
-
-            <asp:Label ID="LabelSenha1" runat="server" Text="Digite uma Senha"></asp:Label>
-            <asp:TextBox ID="txtCadastroSenha1" runat="server"></asp:TextBox>
-
-            <br />
-
-            <asp:Label ID="LabelSenha2" runat="server" Text="Confirme a senha"></asp:Label>
-            <asp:TextBox ID="txtCadastroSenha2" runat="server"></asp:TextBox>
-
-            <br />
-
-            <asp:Button ID="btCadastrar"  runat="server" Text="Cadastrar" OnClick="btCadastrar_Click" />
-            <asp:Button ID="btVoltar"  runat="server" Text="Voltar" OnClick="btVoltar_Click" />
-
+            <asp:Button ID="btCadastrar" CssClass="botaoStyle"  runat="server" Text="Cadastrar" OnClick="btCadastrar_Click" />
+            <asp:Button ID="btVoltar" CssClass="botaoStyle"  runat="server" Text="Voltar" OnClick="btVoltar_Click" />
+        </asp:Panel>
         </div>
     </form>
 </body>

@@ -47,7 +47,7 @@ header{
 .TextBox {
     border-color: #A0A0A0;
     padding: 4px;
-    margin: 15px;
+    margin: 10px;
     border-width: 2px;
     border-radius: 5px;
     border-style: solid;
@@ -75,4 +75,16 @@ header{
     color: black;
     Font-Size:large;
     font-weight:600;
+}
+
+#formCadastro {
+    margin-top: 30%;
+    display: flex;
+    vertical-align: middle;
+    width: 500px;
+    min-width: 500px;
+
+    border-radius: 5px;
+    padding-bottom: 10px;
+    box-shadow: -3px 2px 20px 0px #2E2E2E;
 }

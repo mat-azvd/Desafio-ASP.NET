@@ -9,22 +9,30 @@
 <link rel="stylesheet" href="../CSS/Styles.css" />
 
 <asp:ScriptManager runat="server"></asp:ScriptManager>
+ 
+<div id="formTabela">
+
+<asp:Panel CssClass="PanelTabela" runat="server">
     
-<asp:Panel runat="server">
-    
-    <asp:GridView ID="GridViewProduto" runat="server" AutoGenerateColumns="False" ShowHeaderWhenEmpty="True" EmptyDataText="Sem Produtos Cadastrados" OnRowDeleting="GridViewProduto_RowDeleting1" OnSelectedIndexChanged="GridViewProduto_SelectedIndexChanged">
+    <asp:GridView ID="GridViewProduto" runat="server" AutoGenerateColumns="False" ShowHeaderWhenEmpty="True" EmptyDataText="Sem Produtos Cadastrados" OnRowDeleting="GridViewProduto_RowDeleting1" OnSelectedIndexChanged="GridViewProduto_SelectedIndexChanged" BackColor="White" BorderColor="black" BorderStyle="Solid" BorderWidth="1px" CellPadding="10" ForeColor="Black" GridLines="Vertical">
         <Columns>
             <asp:BoundField HeaderText="Código" DataField="ID" />
             <asp:BoundField HeaderText="Nome do Produto" DataField="nome" />
             <asp:BoundField HeaderText="Quantidade" DataField="quantidade" />
-            <asp:CommandField SelectText="Editar" ShowSelectButton="True" />
+            <asp:CommandField HeaderText="Ação1" ShowSelectButton="True" SelectText="Editar" />
             <asp:CommandField HeaderText="Ação2" ShowDeleteButton="True" />
         </Columns>
+        
+        <HeaderStyle BackColor="Black" Font-Bold="True" ForeColor="White" />
+        <PagerStyle BackColor="white" ForeColor="Black" HorizontalAlign="Center" BorderStyle="Solid" BorderColor="Black" BorderWidth="2px" />
+      
+
     </asp:GridView> 
     <asp:Button ID="botaoModalInserir" runat="server" Text="Inserir" OnClick="botaoModalInserir_Click" />
     <asp:Button ID="ButtonDownloadPDF" runat="server" Text="Download PFD" />
     <asp:Label ID="lblabel" runat="server" Text="Label"></asp:Label>
- </asp:Panel> 
+ </asp:Panel>
+   </div>
     
     <ajaxToolkit:ModalPopupExtender ID="modalEditar" PopupControlID="PanelModalEditar" TargetControlID="lblabel" CancelControlID="botaoModalFechar1" runat="server"></ajaxToolkit:ModalPopupExtender> 
     

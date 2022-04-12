@@ -1,6 +1,6 @@
 ﻿@charset "utf-8";
 
-header{
+#header{
     width: 80%;
     height: 10%;
     margin: auto;
@@ -42,6 +42,17 @@ header{
     border-radius: 5px;
     padding-bottom: 10px;
     box-shadow: -3px 2px 20px 0px #2E2E2E;
+}
+
+.PanelTabela {
+  
+    
+}
+
+#formTabela {
+    display: flex;
+    vertical-align: middle;
+
 }
 
 .TextBox {

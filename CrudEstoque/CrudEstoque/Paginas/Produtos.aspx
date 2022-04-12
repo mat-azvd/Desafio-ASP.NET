@@ -9,12 +9,14 @@
 <link rel="stylesheet" href="../CSS/Styles.css" />
 
 <asp:ScriptManager runat="server"></asp:ScriptManager>
- 
-<div id="formTabela">
 
-<asp:Panel CssClass="PanelTabela" runat="server">
-    
-    <asp:GridView ID="GridViewProduto" runat="server" AutoGenerateColumns="False" ShowHeaderWhenEmpty="True" EmptyDataText="Sem Produtos Cadastrados" OnRowDeleting="GridViewProduto_RowDeleting1" OnSelectedIndexChanged="GridViewProduto_SelectedIndexChanged" BackColor="White" BorderColor="black" BorderStyle="Solid" BorderWidth="1px" CellPadding="10" ForeColor="Black" GridLines="Vertical">
+
+<asp:Panel CssClass="PanelTabela"  runat="server">
+
+<div id="formTabela" >
+    <asp:Label ID="tituloProduto" CssClass="LabelTitulo" runat="server" Text="Produtos"></asp:Label>
+    <br />
+    <asp:GridView ID="GridViewProduto" HorizontalAlign="Center" CssClass="gridProduto" runat="server" AutoGenerateColumns="False" ShowHeaderWhenEmpty="True" EmptyDataText="Sem Produtos Cadastrados" OnRowDeleting="GridViewProduto_RowDeleting1" OnSelectedIndexChanged="GridViewProduto_SelectedIndexChanged" BackColor="White" BorderColor="black" BorderStyle="Solid" BorderWidth="1px" CellPadding="15" ForeColor="Black" GridLines="Both">
         <Columns>
             <asp:BoundField HeaderText="Código" DataField="ID" />
             <asp:BoundField HeaderText="Nome do Produto" DataField="nome" />
@@ -26,51 +28,49 @@
         <HeaderStyle BackColor="Black" Font-Bold="True" ForeColor="White" />
         <PagerStyle BackColor="white" ForeColor="Black" HorizontalAlign="Center" BorderStyle="Solid" BorderColor="Black" BorderWidth="2px" />
       
-
     </asp:GridView> 
-    <asp:Button ID="botaoModalInserir" runat="server" Text="Inserir" OnClick="botaoModalInserir_Click" />
-    <asp:Button ID="ButtonDownloadPDF" runat="server" Text="Download PFD" />
+    <br />
+    <asp:Button ID="botaoModalInserir" CssClass="botaoInserir" runat="server" Text="Inserir" OnClick="botaoModalInserir_Click" />
+    <asp:Button ID="ButtonDownloadPDF" CssClass="botaoPDF" runat="server" Text="Download PFD" />
     <asp:Label ID="lblabel" runat="server" Text="Label"></asp:Label>
+    </div>  
  </asp:Panel>
-   </div>
+  
     
-    <ajaxToolkit:ModalPopupExtender ID="modalEditar" PopupControlID="PanelModalEditar" TargetControlID="lblabel" CancelControlID="botaoModalFechar1" runat="server"></ajaxToolkit:ModalPopupExtender> 
-    
+    <ajaxToolkit:ModalPopupExtender ID="modalEditar" PopupControlID="PanelModalEditar" TargetControlID="lblabel" CancelControlID="botaoModalFechar1" runat="server" BackgroundCssClass="modalBackground"></ajaxToolkit:ModalPopupExtender> 
+  
     <asp:Panel ID="PanelModalEditar" CssClass="modal" runat="server">
-
-        <div>
-             <asp:Label ID="nomeAlterar" CssClass="label" runat="server" Text="Nome do Produto"></asp:Label>
+      
+             <asp:Label ID="nomeAlterar" CssClass="labelModal" runat="server" Text="Nome do Produto"></asp:Label>
             <asp:TextBox ID="txtNomeAlterar" runat="server" Text=""></asp:TextBox>
             <br />
-            <asp:Label ID="precoAlterar" CssClass="label" runat="server" Text="Preço do Produto"></asp:Label>
+            <asp:Label ID="precoAlterar" CssClass="labelModal" runat="server" Text="Preço do Produto"></asp:Label>
             <asp:TextBox ID="txtPrecoAlterar" runat="server" Text=""></asp:TextBox>
             <br />
-            <asp:Label ID="quantidadeAlterar" CssClass="label" runat="server" Text="Quantidade do Produto"></asp:Label>
+            <asp:Label ID="quantidadeAlterar" CssClass="labelModal" runat="server" Text="Quantidade do Produto"></asp:Label>
             <asp:TextBox ID="txtQuantidadeAlterar" runat="server" Text=""></asp:TextBox>
             <br />
             <br />
-            <asp:Label ID="ultima_alt_porAlterar" CssClass="label" runat="server" Text="Ultima alt por: "></asp:Label>
-            <asp:Label ID="ultima_label" CssClass="label" runat="server" Text=""></asp:Label>
+            <asp:Label ID="ultima_alt_porAlterar" CssClass="labelModal" runat="server" Text="Ultima alt por: "></asp:Label>
+            <asp:Label ID="ultima_label" CssClass="labelModal" runat="server" Text=""></asp:Label>
             <br />
             <br />
             <asp:Button ID="botaoModalFechar1" runat="server" Text="Fechar" />
             <asp:Button ID="botaoModalSalvar" runat="server" Text="Alterar" OnClick="botaoModalAlterar_Click"  />
-        </div>
-
     </asp:Panel>
 
-      <ajaxToolkit:ModalPopupExtender ID="ModalInserir" PopupControlID="PanelModalInserir" TargetControlID="lblabel" CancelControlID="botaoModalFechar2" runat="server"></ajaxToolkit:ModalPopupExtender> 
+      <ajaxToolkit:ModalPopupExtender ID="ModalInserir" BackgroundCssClass="modalBackground" PopupControlID="PanelModalInserir" TargetControlID="lblabel" CancelControlID="botaoModalFechar2" runat="server"></ajaxToolkit:ModalPopupExtender> 
     
     <asp:Panel ID="PanelModalInserir" CssClass="modal" runat="server" BorderStyle="Solid">
 
         
-            <asp:Label ID="prodNome" CssClass="label" runat="server" Text="Nome do Produto"></asp:Label>
+            <asp:Label ID="prodNome" CssClass="labelModal" runat="server" Text="Nome do Produto"></asp:Label>
             <asp:TextBox ID="txtProdNome" runat="server"></asp:TextBox>
             <br />
-            <asp:Label ID="prodPreco" CssClass="label" runat="server" Text="Preço do Produto"></asp:Label>
+            <asp:Label ID="prodPreco" CssClass="labelModal" runat="server" Text="Preço do Produto"></asp:Label>
             <asp:TextBox ID="txtProdPreco" runat="server"></asp:TextBox>
             <br /> 
-            <asp:Label ID="prodQuantidade" CssClass="label" runat="server" Text="Quantidade do Produto"></asp:Label>
+            <asp:Label ID="prodQuantidade" CssClass="labelModal" runat="server" Text="Quantidade do Produto"></asp:Label>
             <asp:TextBox ID="txtProdQuantidade" runat="server"></asp:TextBox>
             <br />
             <asp:Button ID="botaoModalFechar2" runat="server" Text="Fechar" />

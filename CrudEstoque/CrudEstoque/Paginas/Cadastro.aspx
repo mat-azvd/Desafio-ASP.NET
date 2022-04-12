@@ -13,18 +13,26 @@
 
         <div id="formLogin">
 
-            <asp:Panel ID="Panel1" CssClass="PanelLogin" runat="server" HorizontalAlign="Center"  >
+            <asp:Panel ID="Panel1" CssClass="PanelLogin" runat="server" HorizontalAlign="Center" Font-Size="Small"  >
 
             <asp:Label runat="server" CssClass="LabelTitulo"  Text="Cadastro"></asp:Label>
             <br />
             
             <asp:TextBox ID="txtCadastroNome" CssClass="TextBox" runat="server" placeholder="Nome"></asp:TextBox>
+                <br />
+                <asp:RequiredFieldValidator ValidationGroup="validacao1" ID="RequiredFieldValidator1" runat="server" ControlToValidate="txtCadastroNome" ErrorMessage="Digite um nome" ForeColor="Red"></asp:RequiredFieldValidator>
             <br />            
             <asp:TextBox ID="txtCadastroEmail" CssClass="TextBox" runat="server" placeholder="Email"></asp:TextBox>
+                <br />
+                <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="txtCadastroEmail" ErrorMessage="Digite um Email" ForeColor="Red"></asp:RequiredFieldValidator>
             <br />         
             <asp:TextBox ID="txtCadastroSenha1" CssClass="TextBox" runat="server" placeholder="Senha"></asp:TextBox>
+                <br />
+                <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ControlToValidate="txtCadastroSenha1" ErrorMessage="Digite uma senha" ForeColor="Red"></asp:RequiredFieldValidator>
             <br />         
             <asp:TextBox ID="txtCadastroSenha2" CssClass="TextBox" runat="server" placeholder="Confirma Senha"></asp:TextBox>
+                <br />
+                <asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" ControlToValidate="txtCadastroSenha2" ErrorMessage="Confirme a senha" ForeColor="Red"></asp:RequiredFieldValidator>
             <br />
             <asp:Button ID="btCadastrar" CssClass="botaoStyle"  runat="server" Text="Cadastrar" OnClick="btCadastrar_Click" />
             <asp:Button ID="btVoltar" CssClass="botaoStyle"  runat="server" Text="Voltar" OnClick="btVoltar_Click" />

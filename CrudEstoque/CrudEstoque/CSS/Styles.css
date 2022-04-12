@@ -45,18 +45,34 @@ header{
 }
 
 .TextBox {
-    border-color: #dcdcdc;
+    border-color: #A0A0A0;
     padding: 4px;
     margin: 15px;
     border-width: 2px;
-    border-radius: 10px;
+    border-radius: 5px;
     border-style: solid;
     transition: box-shadow 0.3s, border 0.3s;
-   
 }
 
 #formLogin {
     margin-top: 30%;
     display: flex;
     vertical-align: middle;
+}
+
+.botaoStyle {
+    border-radius: 5px;
+    background-color: #006FFF;
+    color: white;
+    height: 35px;
+    font-family: 'Segoe UI Emoji';
+    Font-Size: medium;
+    font-weight: 500;
+}
+
+.LabelTitulo {
+    font-family: 'Segoe UI Emoji';
+    color: black;
+    Font-Size:large;
+    font-weight:600;
 }

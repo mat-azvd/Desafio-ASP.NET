@@ -14,7 +14,7 @@
            
              
             <asp:Panel ID="Panel1" CssClass="PanelLogin" runat="server" HorizontalAlign="Center"  >
-            <asp:Label ID="Titulo" CssClass="Titulo" runat="server" Text="LOGIN"></asp:Label>
+            <asp:Label ID="Titulo" CssClass="LabelTitulo" runat="server" Text="Login"></asp:Label>
             <br />
              
                 <asp:TextBox ID="TextEmail" runat="server" CssClass="TextBox" Textmode="Email" placeholder="Email"></asp:TextBox>
@@ -23,9 +23,9 @@
                 <asp:Textbox ID="TextSenha" CssClass="TextBox" runat="server" TextMode="Password" placeholder="Senha" ></asp:Textbox>
                 <br />
 
-                <asp:Button ID="btLogar"  runat="server" Text="Logar" OnClick="btLogar_Click" />
+                <asp:Button ID="btLogar" CssClass="botaoStyle"  runat="server" Text="Logar" OnClick="btLogar_Click" />
                
-                <asp:Button ID="btCadastro"  runat="server" Text="Cadastrar" OnClick="btCadastrar_Click" />
+                <asp:Button ID="btCadastro" CssClass="botaoStyle"  runat="server" Text="Cadastrar" OnClick="btCadastrar_Click" />
 
             </asp:Panel>
 

@@ -32,16 +32,16 @@ header{
 }
 
 .PanelLogin {
-   
-    width: 80%;
+ 
+    width: 500px;
+    min-width: 500px;
     height: 10%;
     margin: auto;
     padding: 0.6em;
-    border: solid;
-    border-color: black;
-    border-width: 5px;
-    border-radius: 8px;
+    
+    border-radius: 5px;
     padding-bottom: 10px;
+    box-shadow: -3px 2px 20px 0px #2E2E2E;
 }
 
 .TextBox {
@@ -52,4 +52,11 @@ header{
     border-radius: 10px;
     border-style: solid;
     transition: box-shadow 0.3s, border 0.3s;
+   
+}
+
+#formLogin {
+    margin-top: 30%;
+    display: flex;
+    vertical-align: middle;
 }

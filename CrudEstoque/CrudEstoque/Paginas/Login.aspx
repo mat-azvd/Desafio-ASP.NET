@@ -9,21 +9,18 @@
     <title></title>
 </head>
 <body>
-    <form id="form1" runat="server">
-        <div>
+    <form id="form1"  runat="server">
+        <div id="formLogin">
            
-            <asp:Panel ID="Panel1" CssClass="PanelLogin" runat="server" HorizontalAlign="Center" Width="30%" >
+             
+            <asp:Panel ID="Panel1" CssClass="PanelLogin" runat="server" HorizontalAlign="Center"  >
             <asp:Label ID="Titulo" CssClass="Titulo" runat="server" Text="LOGIN"></asp:Label>
             <br />
-                <asp:Label ID="LabelEmail" runat="server" Text="Email"></asp:Label>
-                <br />              
-                <asp:Textbox ID="TextEmail" CssClass="TextBox" runat="server" Textmode="Email"></asp:Textbox>
-                <br />
-
-                <asp:Label ID="LabelSenha" runat="server" Text="Senha"></asp:Label>
+             
+                <asp:TextBox ID="TextEmail" runat="server" CssClass="TextBox" Textmode="Email" placeholder="Email"></asp:TextBox>
                 <br />
                  
-                <asp:Textbox ID="TextSenha" CssClass="TextBox" runat="server" TextMode="Password" ></asp:Textbox>
+                <asp:Textbox ID="TextSenha" CssClass="TextBox" runat="server" TextMode="Password" placeholder="Senha" ></asp:Textbox>
                 <br />
 
                 <asp:Button ID="btLogar"  runat="server" Text="Logar" OnClick="btLogar_Click" />
@@ -31,7 +28,8 @@
                 <asp:Button ID="btCadastro"  runat="server" Text="Cadastrar" OnClick="btCadastrar_Click" />
 
             </asp:Panel>
-        </div>
+
+            </div>
     </form>
 </body>
 </html>

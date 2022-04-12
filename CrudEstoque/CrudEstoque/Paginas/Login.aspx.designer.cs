@@ -42,15 +42,6 @@ namespace CrudEstoque.Paginas
         protected global::System.Web.UI.WebControls.Label Titulo;
 
         /// <summary>
-        /// Controle LabelEmail.
-        /// </summary>
-        /// <remarks>
-        /// Campo gerado automaticamente.
-        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label LabelEmail;
-
-        /// <summary>
         /// Controle TextEmail.
         /// </summary>
         /// <remarks>
@@ -58,15 +49,6 @@ namespace CrudEstoque.Paginas
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox TextEmail;
-
-        /// <summary>
-        /// Controle LabelSenha.
-        /// </summary>
-        /// <remarks>
-        /// Campo gerado automaticamente.
-        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label LabelSenha;
 
         /// <summary>
         /// Controle TextSenha.

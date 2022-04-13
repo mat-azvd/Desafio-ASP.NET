@@ -182,18 +182,18 @@ td > a {
 
 .botaoInserir {
     border-radius: 10px;
-    background-color: #43CD55;
+    background-color: #007A08;
     color: white;
     height: 25px;
     font-family: 'Segoe UI Emoji';
-    Font-Size:small;
+    Font-Size: small;
     font-weight: 500;
 }
 
     .botaoInserir:hover {
         color: white;
         text-decoration: none;
-        background-color: #6CD57A;
+        background-color: #00E60F;
     }
 
 .botaoPDF {

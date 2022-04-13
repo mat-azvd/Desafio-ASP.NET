@@ -96,6 +96,42 @@
     font-family: 'Segoe UI Emoji';
     Font-Size: medium;
     font-weight: 500;
+    -ms-touch-action: manipulation;
+    touch-action: manipulation;
+    white-space: nowrap;
+    
+}
+
+td > a {
+    /*button*/
+    display: inline-block;
+    margin-bottom: 0;
+    text-align: center;
+    vertical-align: middle;
+    -ms-touch-action: manipulation;
+    touch-action: manipulation;
+    background-image: none;
+    border: 1px solid transparent;
+    white-space: nowrap;
+    padding: 4px 8px;
+    font-size: 14px;
+    border-radius: 5px;
+    /*button color*/
+    color: white;
+    background-color: #006FFF;
+}
+
+    td > a:hover {
+        color: #555555;
+        text-decoration: none;
+        background-color: #5EA4FF;
+    }
+
+
+.botaoStyle:hover {
+    color: white;
+    text-decoration: none;
+    background-color: #5EA4FF;
 }
 
 .LabelTitulo {
@@ -103,6 +139,20 @@
     color: black;
     Font-Size:large;
     font-weight:600;
+}
+
+.labelModal{
+    font-family: 'Segoe UI Emoji';
+    color: black;
+    Font-Size: medium;
+    font-weight: 600;
+}
+
+.labelValidator {
+    font-family: 'Segoe UI Emoji';
+    Font-Size: xx-small;
+    font-weight: 600;
+    text-align:right;
 }
 
 #formCadastro {

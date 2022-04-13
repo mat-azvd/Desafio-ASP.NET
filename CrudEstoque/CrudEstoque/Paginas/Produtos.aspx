@@ -17,6 +17,7 @@
     <asp:Label ID="tituloProduto" CssClass="LabelTitulo" runat="server" Text="Produtos"></asp:Label>
     <br />
     <asp:GridView ID="GridViewProduto" HorizontalAlign="Center" CssClass="gridProduto" runat="server" AutoGenerateColumns="False" ShowHeaderWhenEmpty="True" EmptyDataText="Sem Produtos Cadastrados" OnRowDeleting="GridViewProduto_RowDeleting1" OnSelectedIndexChanged="GridViewProduto_SelectedIndexChanged" BackColor="White" BorderColor="black" BorderStyle="Solid" BorderWidth="1px" CellPadding="15" ForeColor="Black" GridLines="Both">
+        
         <Columns>
             <asp:BoundField HeaderText="Código" DataField="ID" />
             <asp:BoundField HeaderText="Nome do Produto" DataField="nome" />
@@ -26,7 +27,7 @@
         </Columns>
         
         <HeaderStyle BackColor="Black" Font-Bold="True" ForeColor="White" />
-        <PagerStyle BackColor="white" ForeColor="Black" HorizontalAlign="Center" BorderStyle="Solid" BorderColor="Black" BorderWidth="2px" />
+        <PagerStyle BackColor="white" ForeColor="White"  HorizontalAlign="Center" BorderStyle="Solid" BorderColor="Black" BorderWidth="2px" />
       
     </asp:GridView> 
     <br />
@@ -46,23 +47,21 @@
         <div class="conteudoModal">
              <asp:Label ID="nomeAlterar" CssClass="labelModal" runat="server" Text="Nome do Produto"></asp:Label>
             <asp:TextBox ID="txtNomeAlterar" CssClass="TextBox" runat="server" Text=""></asp:TextBox>
-             <br />
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" ControlToValidate="txtNomeAlterar" ErrorMessage="Digite um nome" Font-Size="Small" ForeColor="Red" ValidationGroup="validacao4"></asp:RequiredFieldValidator>
+            <asp:RequiredFieldValidator ID="RequiredFieldValidator4" CssClass="labelValidator" runat="server" ControlToValidate="txtNomeAlterar" ErrorMessage="Digite um nome" ForeColor="Red" ValidationGroup="validacao4" Font-Size="X-Small"></asp:RequiredFieldValidator>
             <br />
             <asp:Label ID="precoAlterar" CssClass="labelModal" runat="server" Text="Preço do Produto"></asp:Label>
             <asp:TextBox ID="txtPrecoAlterar" CssClass="TextBox" runat="server" Text=""></asp:TextBox>
-            <br />
-             <asp:RequiredFieldValidator ID="RequiredFieldValidator5" runat="server" ControlToValidate="txtPrecoAlterar" ErrorMessage="Digite um preço" Font-Size="Small" ForeColor="Red" ValidationGroup="validacao4"></asp:RequiredFieldValidator>
-            <br />
-            <asp:RegularExpressionValidator ID="RegularExpressionValidator2" ControlToValidate="txtPrecoAlterar" runat="server" ErrorMessage="Digite apenas numeros" Font-Size="Small" ForeColor="Red" ValidationGroup="validacao4" ValidationExpression="^[0-9]*$"></asp:RegularExpressionValidator>
+             <asp:RequiredFieldValidator ID="RequiredFieldValidator5" CssClass="labelValidator" runat="server" ControlToValidate="txtPrecoAlterar" ErrorMessage="Digite um preço" ForeColor="Red" ValidationGroup="validacao4" Font-Size="X-Small"></asp:RequiredFieldValidator>
+             <br />
+             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <asp:RegularExpressionValidator ID="RegularExpressionValidator2" CssClass="labelValidator" ControlToValidate="txtPrecoAlterar" runat="server" ErrorMessage="Digite apenas numeros" ForeColor="Red" ValidationGroup="validacao4" ValidationExpression="^[0-9]*$" Font-Size="X-Small"></asp:RegularExpressionValidator>
             <br />
             <asp:Label ID="quantidadeAlterar" CssClass="labelModal" runat="server" Text="Quantidade do Produto"></asp:Label>
             <asp:TextBox ID="txtQuantidadeAlterar" CssClass="TextBox" runat="server" Text=""></asp:TextBox>
+            <asp:RequiredFieldValidator ID="RequiredFieldValidator6" CssClass="labelValidator" runat="server" ControlToValidate="txtQuantidadeAlterar" ErrorMessage="Digite uma quantidade" ForeColor="Red" ValidationGroup="validacao4" Font-Size="X-Small"></asp:RequiredFieldValidator>
             <br />
-            <asp:RequiredFieldValidator ID="RequiredFieldValidator6" runat="server" ControlToValidate="txtQuantidadeAlterar" ErrorMessage="Digite uma quantidade" Font-Size="Small" ForeColor="Red" ValidationGroup="validacao4"></asp:RequiredFieldValidator>
-            <br />
-            <asp:RegularExpressionValidator ID="RegularExpressionValidator7" ControlToValidate="txtQuantidadeAlterar" runat="server" ErrorMessage="Quantidade menor que zero" Font-Size="Small" ForeColor="Red" ValidationGroup="validacao4" ValidationExpression="^[0-9]\d*$"></asp:RegularExpressionValidator>
+             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <asp:RegularExpressionValidator ID="RegularExpressionValidator7" CssClass="labelValidator" ControlToValidate="txtQuantidadeAlterar" runat="server" ErrorMessage="Quantidade menor que zero" ForeColor="Red" ValidationGroup="validacao4" ValidationExpression="^[0-9]\d*$" Font-Size="X-Small"></asp:RegularExpressionValidator>
             <br />
             <asp:Label ID="ultima_alt_porAlterar" CssClass="labelModal" runat="server" Text="Ultima alt por: "></asp:Label>
             <asp:Label ID="ultima_label" CssClass="labelModal" runat="server" Text=""></asp:Label>
@@ -86,23 +85,22 @@
         <div class="conteudoModal">
             <asp:Label ID="prodNome" CssClass="labelModal" runat="server" Text="Nome do Produto"></asp:Label>
             <asp:TextBox ID="txtProdNome" CssClass="TextBox" runat="server"></asp:TextBox>
+            <asp:RequiredFieldValidator ID="RequiredFieldValidator1" CssClass="labelValidator" runat="server" ControlToValidate="txtProdNome" ErrorMessage="Digite um nome" ForeColor="Red" ValidationGroup="validacao2" Font-Size="X-Small"></asp:RequiredFieldValidator>
             <br />
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="txtProdNome" ErrorMessage="Digite um nome" Font-Size="Small" ForeColor="Red" ValidationGroup="validacao2"></asp:RequiredFieldValidator>
             <br />
             <asp:Label ID="prodPreco" CssClass="labelModal" runat="server" Text="Preço do Produto"></asp:Label>
             <asp:TextBox ID="txtProdPreco" CssClass="TextBox" runat="server"></asp:TextBox>
+             <asp:RequiredFieldValidator ID="RequiredFieldValidator2" CssClass="labelValidator" runat="server" ControlToValidate="txtProdPreco" ErrorMessage="Digite um preço" ForeColor="Red" ValidationGroup="validacao2" Font-Size="X-Small"></asp:RequiredFieldValidator>
             <br />
-             <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="txtProdPreco" ErrorMessage="Digite um preço" Font-Size="Small" ForeColor="Red" ValidationGroup="validacao2"></asp:RequiredFieldValidator>
-            <br />
-            <asp:RegularExpressionValidator ID="RegularExpressionValidator1" runat="server" ControlToValidate="txtProdPreco" ErrorMessage="Digite apenas numeros" Font-Size="Small" ForeColor="Red" ValidationGroup="validacao2" ValidationExpression="^[0-9]*$"></asp:RegularExpressionValidator>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <asp:RegularExpressionValidator ID="RegularExpressionValidator1" CssClass="labelValidator" runat="server" ControlToValidate="txtProdPreco" ErrorMessage="Digite apenas numeros" ForeColor="Red" ValidationGroup="validacao2" ValidationExpression="^[0-9]*$" Font-Size="X-Small"></asp:RegularExpressionValidator>
             <br />
             <asp:Label ID="prodQuantidade" CssClass="labelModal" runat="server" Text="Quantidade do Produto"></asp:Label>
             <asp:TextBox ID="txtProdQuantidade" CssClass="TextBox" runat="server"></asp:TextBox>
-            <br />            
-            <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ControlToValidate="txtProdQuantidade" ErrorMessage="Digite uma quantidade" Font-Size="Small" ForeColor="Red" ValidationGroup="validacao2"></asp:RequiredFieldValidator>
+            <asp:RequiredFieldValidator ID="RequiredFieldValidator3" CssClass="labelValidator" runat="server" ControlToValidate="txtProdQuantidade" ErrorMessage="Digite uma quantidade" ForeColor="Red" ValidationGroup="validacao2" Font-Size="X-Small"></asp:RequiredFieldValidator>
             <br />
-            <asp:RegularExpressionValidator ID="RegularExpressionValidator8" ControlToValidate="txtProdQuantidade" runat="server" ErrorMessage="Quantidade menor que zero" Font-Size="Small" ForeColor="Red" ValidationGroup="validacao2" ValidationExpression="^[0-9]\d*$"></asp:RegularExpressionValidator>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <asp:RegularExpressionValidator ID="RegularExpressionValidator8" CssClass="labelValidator" ControlToValidate="txtProdQuantidade" runat="server" ErrorMessage="Quantidade menor que zero" ForeColor="Red" ValidationGroup="validacao2" ValidationExpression="^[0-9]\d*$" Font-Size="X-Small"></asp:RegularExpressionValidator>
         </div>
             <br />
         <div class="footerModal">

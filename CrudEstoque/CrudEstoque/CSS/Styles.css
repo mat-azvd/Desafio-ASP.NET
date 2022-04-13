@@ -99,11 +99,19 @@
     -ms-touch-action: manipulation;
     touch-action: manipulation;
     white-space: nowrap;
+
+
     
 }
 
+    .botaoStyle:hover {
+        color: white;
+        text-decoration: none;
+        background-color: #5EA4FF;
+    }
+
 td > a {
-    /*button*/
+   
     display: inline-block;
     margin-bottom: 0;
     text-align: center;
@@ -116,23 +124,20 @@ td > a {
     padding: 4px 8px;
     font-size: 14px;
     border-radius: 5px;
-    /*button color*/
+    font-family: 'Segoe UI Emoji';
+   
     color: white;
     background-color: #006FFF;
 }
 
     td > a:hover {
-        color: #555555;
+        color: white;
         text-decoration: none;
         background-color: #5EA4FF;
     }
 
 
-.botaoStyle:hover {
-    color: white;
-    text-decoration: none;
-    background-color: #5EA4FF;
-}
+
 
 .LabelTitulo {
     font-family: 'Segoe UI Emoji';
@@ -185,6 +190,12 @@ td > a {
     font-weight: 500;
 }
 
+    .botaoInserir:hover {
+        color: white;
+        text-decoration: none;
+        background-color: #6CD57A;
+    }
+
 .botaoPDF {
     border-radius: 15px;
     background-color: #B72323;
@@ -194,6 +205,12 @@ td > a {
     Font-Size: small;
     font-weight: 500;
 }
+
+    .botaoPDF:hover {
+        color: white;
+        text-decoration: none;
+        background-color: #E62A2A;
+    }
 
 
 .conteudoModal{

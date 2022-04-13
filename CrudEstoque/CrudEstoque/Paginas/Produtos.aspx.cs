@@ -6,6 +6,9 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using CrudEstoque.DAL;
 using CrudEstoque.Modelo;
+using iTextSharp.text.html.simpleparser;
+using iTextSharp.text;
+using iTextSharp.text.pdf;
 
 namespace CrudEstoque.Paginas
 {
@@ -138,6 +141,62 @@ namespace CrudEstoque.Paginas
            
         }
 
-        
+        protected void ButtonDownloadPDF_Click(object sender, EventArgs e)
+        {
+            
+            PdfPTable pdfTable = new PdfPTable(GridViewProduto.HeaderRow.Cells.Count);
+
+            foreach (TableCell gridViewHeaderCell in GridViewProduto.HeaderRow.Cells)
+            {
+                // Criar objeto fonte para o PDF
+                Font font = new Font();
+
+                // Mudar a cor do header da Grindview
+                font.Color = new BaseColor(GridViewProduto.HeaderStyle.ForeColor);
+
+                // Criar cada celula do pdf passando o texto e a fonte
+                PdfPCell pdfCell = new PdfPCell(new Phrase(gridViewHeaderCell.Text, font));
+
+                // Cor do background da grindview
+                pdfCell.BackgroundColor = new BaseColor(GridViewProduto.HeaderStyle.BackColor);
+
+                // Adicionar as celulas na tabela de PDF
+                pdfTable.AddCell(pdfCell);
+            }
+
+            foreach (GridViewRow gridViewRow in GridViewProduto.Rows)
+            {
+                if (gridViewRow.RowType == DataControlRowType.DataRow)
+                {
+                    // Loop por cada celula das linhas da Grindview
+                    foreach (TableCell gridViewCell in gridViewRow.Cells)
+                    {
+                        Font font = new Font();
+                        
+                        PdfPCell pdfCell = new PdfPCell(new Phrase(gridViewCell.Text, font));
+
+                        pdfCell.BackgroundColor = new BaseColor(GridViewProduto.RowStyle.BackColor);
+
+                        pdfTable.AddCell(pdfCell);
+                    }
+                }
+            }
+
+            Document pdfDocument = new Document(PageSize.A4, 10f, 10f, 10f, 10f);
+
+            PdfWriter.GetInstance(pdfDocument, Response.OutputStream);
+
+            pdfDocument.Open();
+            pdfDocument.Add(pdfTable);
+            pdfDocument.Close();
+
+            Response.ContentType = "application/pdf";
+            Response.AppendHeader("content-disposition","attachment;filename=Estoque.pdf");
+            Response.Write(pdfDocument);
+            Response.Flush();
+            Response.End();
+        }
+
     }
+    
 }

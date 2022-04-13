@@ -32,7 +32,7 @@
     </asp:GridView> 
     <br />
     <asp:Button ID="botaoModalInserir" CssClass="botaoInserir" runat="server" Text="Inserir" OnClick="botaoModalInserir_Click" />
-    <asp:Button ID="ButtonDownloadPDF" CssClass="botaoPDF" runat="server" Text="Download PFD" />
+    <asp:Button ID="ButtonDownloadPDF" CssClass="botaoPDF" runat="server" Text="Download PFD" OnClick="ButtonDownloadPDF_Click" />
     <asp:Label ID="lblabel" runat="server" Text="Label"></asp:Label>
     </div>  
  </asp:Panel>

@@ -155,10 +155,10 @@
       <DependentUpon>EstoqueDB.mdf</DependentUpon>
     </Content>
     <Content Include="CSS\Styles.css" />
-    <Content Include="Paginas\AlterarProduto.aspx" />
     <Content Include="Paginas\Cadastro.aspx" />
     <Content Include="Paginas\Login.aspx" />
     <Content Include="Paginas\Produtos.aspx" />
+    <Content Include="Paginas\Usuarios.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -167,13 +167,6 @@
     <Compile Include="Modelo\ModeloProduto.cs" />
     <Compile Include="Modelo\ModeloUsuario.cs" />
     <Compile Include="Modelo\TesteModelo.cs" />
-    <Compile Include="Paginas\AlterarProduto.aspx.cs">
-      <DependentUpon>AlterarProduto.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Paginas\AlterarProduto.aspx.designer.cs">
-      <DependentUpon>AlterarProduto.aspx</DependentUpon>
-    </Compile>
     <Compile Include="Paginas\Cadastro.aspx.cs">
       <DependentUpon>Cadastro.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -201,6 +194,13 @@
     </Compile>
     <Compile Include="Paginas\Produtos.aspx.designer.cs">
       <DependentUpon>Produtos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Paginas\Usuarios.aspx.cs">
+      <DependentUpon>Usuarios.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Paginas\Usuarios.aspx.designer.cs">
+      <DependentUpon>Usuarios.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

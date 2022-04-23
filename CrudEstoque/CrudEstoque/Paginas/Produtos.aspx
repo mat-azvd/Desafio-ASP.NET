@@ -13,28 +13,28 @@
 
 <asp:Panel CssClass="PanelTabela"  runat="server">
 
-<div id="formTabela" >
-    <asp:Label ID="tituloProduto" CssClass="LabelTitulo" runat="server" Text="Produtos"></asp:Label>
-    <br />
-    <asp:GridView ID="GridViewProduto" HorizontalAlign="Center" CssClass="gridProduto" runat="server" AutoGenerateColumns="False" ShowHeaderWhenEmpty="True" EmptyDataText="Sem Produtos Cadastrados" OnRowDeleting="GridViewProduto_RowDeleting1" OnSelectedIndexChanged="GridViewProduto_SelectedIndexChanged" BackColor="White" BorderColor="black" BorderStyle="Solid" BorderWidth="1px" CellPadding="15" ForeColor="Black" GridLines="Both">
+        <div id="formTabela" >
+            <asp:Label ID="tituloProduto" CssClass="LabelTitulo" runat="server" Text="Produtos"></asp:Label>
+            <br />
+            <asp:GridView ID="GridViewProduto" HorizontalAlign="Center" CssClass="gridProduto" runat="server" AutoGenerateColumns="False" ShowHeaderWhenEmpty="True" EmptyDataText="Sem Produtos Cadastrados" OnRowDeleting="GridViewProduto_RowDeleting1" OnSelectedIndexChanged="GridViewProduto_SelectedIndexChanged" BackColor="White" BorderColor="black" BorderStyle="Solid" BorderWidth="1px" CellPadding="15" ForeColor="Black" GridLines="Both">
         
-        <Columns>
-            <asp:BoundField HeaderText="Código" DataField="ID" />
-            <asp:BoundField HeaderText="Nome do Produto" DataField="nome" />
-            <asp:BoundField HeaderText="Quantidade" DataField="quantidade" />
-            <asp:CommandField HeaderText="Ação1" ShowSelectButton="True" SelectText="Editar" />
-            <asp:CommandField HeaderText="Ação2" ShowDeleteButton="True" />
-        </Columns>
+                <Columns>
+                    <asp:BoundField HeaderText="Código" DataField="ID" />
+                    <asp:BoundField HeaderText="Nome do Produto" DataField="nome" />
+                    <asp:BoundField HeaderText="Quantidade" DataField="quantidade" />
+                    <asp:CommandField HeaderText="Ação1" ShowSelectButton="True" SelectText="Editar" />
+                    <asp:CommandField HeaderText="Ação2" ShowDeleteButton="True" />
+                </Columns>
         
-        <HeaderStyle BackColor="Black" Font-Bold="True" ForeColor="White" />
-        <PagerStyle BackColor="white" ForeColor="White"  HorizontalAlign="Center" BorderStyle="Solid" BorderColor="Black" BorderWidth="2px" />
+                <HeaderStyle BackColor="Black" Font-Bold="True" ForeColor="White" />
+                <PagerStyle BackColor="white" ForeColor="White"  HorizontalAlign="Center" BorderStyle="Solid" BorderColor="Black" BorderWidth="2px" />
       
-    </asp:GridView> 
-    <br />
-    <asp:Button ID="botaoModalInserir" CssClass="botaoInserir" runat="server" Text="Inserir" OnClick="botaoModalInserir_Click" />
-    <asp:Button ID="ButtonDownloadPDF" CssClass="botaoPDF" runat="server" Text="Download PFD" OnClick="ButtonDownloadPDF_Click" />
-    <asp:Label ID="lblabel" runat="server" Text=""></asp:Label>
-    </div>  
+            </asp:GridView> 
+            <br />
+                <asp:Button ID="botaoModalInserir" CssClass="botaoInserir" runat="server" Text="Inserir" OnClick="botaoModalInserir_Click" />
+                <asp:Button ID="ButtonDownloadPDF" CssClass="botaoPDF" runat="server" Text="Download PFD" OnClick="ButtonDownloadPDF_Click" />
+            <asp:Label ID="lblabel" runat="server" Text=""></asp:Label>
+        </div>  
  </asp:Panel>
   
     

@@ -16,6 +16,7 @@ namespace CrudEstoque.Paginas
             Session.Clear();
         }
 
+
         protected void btLogar_Click(object sender, EventArgs e)
         {
             string email = TextEmail.Text;
